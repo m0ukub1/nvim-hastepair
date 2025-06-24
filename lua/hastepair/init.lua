@@ -41,7 +41,7 @@ local function index_right_pair(row, col)
 end
 
 function M.jump_pair(dir)
-    local row, col = unpack(api.nvim_win_get_cursor(0))
+    local row, col = table.unpack(api.nvim_win_get_cursor(0))
     local pos
     if dir then
         pos = index_right_pair(row, col)
